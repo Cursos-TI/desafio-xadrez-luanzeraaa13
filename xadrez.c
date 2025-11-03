@@ -2,7 +2,7 @@
 
 int main() {
     int rainha = 1, bispo = 1, torre = 1;
-    int casasra, casasbis, casastor;
+    int casasra, casasbis, casastor, movcav;
 
 // Interface inicial do jogo
 
@@ -42,6 +42,51 @@ do
     bispo++;
 } while (bispo <= casasbis);
 
+getchar();
+
+//movimento do cavalo
+
+printf("Agora é a vez de mover o cavalo \n");
+printf("Digite com letra maiuscula H para horizontal ou V para Vertical \n");
+scanf("%c", &movcav);
+
+//switch de definição de direção
+
+switch (movcav)
+{
+
+//Movimentação Horizontal
+
+case 'H' :
+    for (int i = 1; i <= 1; i++)
+    {
+        for (int j = 1; j <= 3; j++)
+        {
+            printf("Direita \n");
+        }
+        printf("Cima \n");
+    }
+
+    break;
+
+//Movimentação Vertical
+
+case 'V':
+    for (int i = 1; i <= 1; i++)
+    {
+        for (int j = 1; j <= 3; j++)
+        {
+            printf("Baixo \n");
+        }
+        printf("Esquerda \n");
+    }
+
+    break;
+
+default:
+    printf("Movimento incorreto \n");
+    break;
+}
 
     return 0;
 }
