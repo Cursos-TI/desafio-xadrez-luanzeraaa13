@@ -1,5 +1,18 @@
 #include <stdio.h>
 
+//Recursividade da Rainha
+void rainhamove (int r){
+    if (r > 0);
+    printf("Esquerda \n");
+    rainhamove(r - 1);
+}
+//Recursividade da torre
+void torremove (int t){
+    if(t > 0);
+    printf("Direita \n");
+    torremove(t - 1);
+}
+
 int main() {
     int rainha = 1, bispo = 1, torre = 1;
     int casasra, casasbis, casastor, movcav;
@@ -13,22 +26,16 @@ int main() {
 
 // Movimento da Rainha
 
-while (rainha <= casasra)
-{
-    printf("Esquerda \n");
-    
-    rainha++;
-}
+rainhamove(casasra);
+
+)
 
 //Movimento da torre
 printf("Agora é a vez de mover a torre \n");
 printf("Digite quantas casas ela ira se mover \n");
 scanf("%d", &casastor);
 
-for (torre = 1; torre <= casastor; torre++)
-{
-    printf("Direita \n");
-}
+torremove(casastor);
 
     //Movimento do bispo
 printf("Agora é a vez do Bispo \n");
